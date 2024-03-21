@@ -648,7 +648,7 @@ border-bottom: .2rem solid #ffffff;}
   margin: 0 auto; 
   height: 29px; 
   width: auto; 
-  padding: 0;
+  padding: 0 !important;
 }
 
 .a-button-discord.mobile-vertical {
@@ -804,6 +804,11 @@ border-bottom: .2rem solid #ffffff;}
         border-radius: none;
         background-color: black;
     }
+
+/* Pagination Text Color*/
+    ul.a-pagination li a {
+      color: var(--dark-text-color);
+      }
 
 /* Reviews Page */
     /* Changing Header color for dark mode */
