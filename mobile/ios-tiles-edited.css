@@ -1,5 +1,5 @@
 /* Adjusted Vine-Styling code to display three tiles, rather than four */
-/* sky */
+/* sky - Mar 20 */
 /* Credits: @thorvarium */
 
 :root {
@@ -536,8 +536,9 @@ body {
 }
 
 /* #################################################################################### */
-/* New Edits for both white and dark */
+/* START OF: New Edits for both Light Mode and Dark Mode */
 
+/* --------------- Product Page --------------- */
 /* Shortens the margin for top most bar (Messages / Vine Help / etc)*/
 .vvp-body>*+* {
     margin-top: 1px !important;
@@ -610,15 +611,80 @@ border-bottom: .2rem solid #ffffff;}
     background: none;
 }
 
-/* New Edits for both white and dark */
-/* #################################################################################### */
+/* Change the "Share on Discord" button, if user has installed */
+.vvp-modal-footer {
+  display: flex;
+  align-items: center; /* align items vertically */
+  justify-content: flex-start;
+  display: flex;              
+  align-items: center;        
+  justify-content: flex-start;
+  width: fit-content;         
+  margin-left: auto;          
+  margin-right: auto;         
+  gap: 10px;                  
+}
 
-/* TESTING */
+/* Displays only the icon */
+.a-button-discord {
+  margin-left: auto;
+  justify-content: center; 
+  padding: 9px; 
+  width: auto; 
+  height: auto;
+}
+/* Hides the text */
+.a-button-discord .a-button-text {
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* prevents text from wrapping */
+}
+
+.a-button-discord svg {
+  margin: 0 auto; 
+  height: 29px; 
+  width: auto; 
+  padding: 0;
+}
+
+.a-button-discord.mobile-vertical {
+  margin-top: auto;
+  margin-left: 10px;
+}
+
 /* Changes the padding inside Product Details; Makes the page longer*/
 .a-popover-modal .a-popover-inner {
-    padding: 0rem 2rem 24rem 1rem;
-    -webkit-overflow-scrolling: touch;
+  padding: 0rem 2rem 24rem 1rem;
+  -webkit-overflow-scrolling: touch;
+} 
+
+/* --------------- Review Page --------------- */
+.vvp-tab-content>* {
+  margin: 5px 2 !important;
 }
+/* Makes the pagination buttons lower */
+.a-text-center[role="navigation"] {
+  margin-top: 20px;
+}
+/* Makes "Awaiting Review" and "Reviewed" in the Center */
+.vvp-items-button-and-search-container {
+  align-items: center;
+}
+
+/* Editing Skyline's VineCapture Buttons */
+/* Hide the tooltips */
+.custom-tooltip {
+  display: none;
+}
+
+/* END OF: New Edits for both Light Mode and Dark Mode */
+/* #################################################################################### */
+
+
 
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
@@ -684,7 +750,7 @@ border-bottom: .2rem solid #ffffff;}
 
 /* Product Page Settings */
     .a-popover-inner {
-        background-color: var( --dark-background-color);  
+        background-color: var(--dark-background-color);  
     /* DEBUGGING CODE LINE BELOW */
         /* background-color: blue;   */
         padding: 1.3rem 1.6rem;
@@ -702,7 +768,7 @@ border-bottom: .2rem solid #ffffff;}
     .a-box {
         display: block;
         border-radius: .8rem;
-        background-color:var( --dark-background-color); /* This makes the block behind the Tiles, SearchBar, RFY/AFA/AI buttons black. Change to #121212 later -- testing rn*/
+        background-color:var(--dark-background-color); /* This makes the block behind the Tiles, SearchBar, RFY/AFA/AI buttons black. Change to #121212 later -- testing rn*/
     }
 
 /* Product Details setting for Dark Mode */
@@ -739,5 +805,9 @@ border-bottom: .2rem solid #ffffff;}
         background-color: black;
     }
 
-
+/* Reviews Page */
+    /* Changing Header color for dark mode */
+    .vvp-tab-content .vvp-reviews-table--heading-top {
+      background-color: var(--dark-cutoff-background-color);  
+    }
 }
