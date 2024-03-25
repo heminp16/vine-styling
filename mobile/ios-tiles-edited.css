@@ -1,5 +1,6 @@
 /* Adjusted Vine-Styling code to display three tiles, rather than four */
-/* sky - Mar 20 */
+/*                                                  Plus more changes  */
+/* sky - Mar 24 */
 /* Credits: @thorvarium */
 
 :root {
@@ -535,6 +536,13 @@ body {
   max-height: var(--max-product-title) !important;
 }
 
+/* Light Mode Edit */
+/* Product Details: makes the bottom bar White (if on Light Mode) */
+.a-popover-modal .a-popover-footer {
+  border-radius: none;
+  background-color: white;
+}
+
 /* #################################################################################### */
 /* START OF: New Edits for both Light Mode and Dark Mode */
 
@@ -611,6 +619,35 @@ border-bottom: .2rem solid #ffffff;}
     background: none;
 }
 
+/* Product Details: fixes the drop-down's popover - Fixes the sizes, makes it more lower */
+.a-dropdown .a-popover-wrapper {
+  height: auto !important;
+}
+.a-popover.a-dropdown.a-dropdown-common.a-declarative {
+  z-index: 1110;
+  visibility: visible;
+  width: auto;
+  display: inline-block;
+  max-width: 100% !important;
+  position: fixed !important;
+  top: 500px !important;
+  left: 97.5px !important;      
+  opacity: 1;
+  max-height: 50vh !important;
+  overflow-y: auto !important;
+}
+
+/* Makes the "Limited Quantity" text show at the top of modal */
+#vvp-product-details-info-container .vvp-limited-quantity {
+  font-weight: 700;
+  color: #d00;
+  position: absolute !important;
+  top: 50px !important;
+  z-index: 101;
+  left: 18px;
+}
+
+
 /* Change the "Share on Discord" button, if user has installed */
 .vvp-modal-footer {
   display: flex;
@@ -683,7 +720,6 @@ border-bottom: .2rem solid #ffffff;}
 
 /* END OF: New Edits for both Light Mode and Dark Mode */
 /* #################################################################################### */
-
 
 
 /* Dark Mode Styles */
@@ -778,7 +814,7 @@ border-bottom: .2rem solid #ffffff;}
     border-radius: 0rem 0rem 0 0; /* Changed this, no more border inside Product Detail page */
     padding: 0 2.4rem;
     }
-    /* Product Detail, changes background of "X" button to white */
+    /* Product Detail: changes background of "X" button to white */
     .a-button-close {
     background-color: white;
     }
@@ -786,7 +822,7 @@ border-bottom: .2rem solid #ffffff;}
         background-color: white
     }
 
-    /* Product Detail, changes product details to white */
+    /* Product Detail: changes product details to white */
     .a-ordered-list .a-list-item,.a-unordered-list .a-list-item,ol .a-list-item,ul .a-list-item {
         color: var(--dark-text-color);
     }
@@ -799,21 +835,74 @@ border-bottom: .2rem solid #ffffff;}
         color: var(--dark-text-color);
     }
 
-    /* Product Details, makes the bottom bar black */
+    /* Product Details: makes the bottom bar black */
     .a-popover-modal .a-popover-footer {
         border-radius: none;
         background-color: black;
     }
 
+    /* Product Details: makes "See More" block Gray */ 
+    .a-expander-partial-collapse-header {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: var(--dark-cutoff-background-color) !important;  
+      
+    }
+
+    /* Product Details: makes "See More" fade transprent to Gray */ 
+    .a-expander-content-fade {
+        height: 1.6rem;
+        width: 100%;
+        position: absolute;
+        top: -1.6rem;
+        left: 0;
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,0)),color-stop(100%,var(--dark-cutoff-background-color)));
+    }
+
+    /* Product Details: makes drop-down buttons Gray */
+    .a-button-group-splitdropdown .a-button .a-button-inner, .a-dropdown-container .a-button-dropdown .a-button-inner {
+      border-radius: .7rem;
+      background: var(--dark-cutoff-background-color) !important;
+      box-shadow: 0 .2rem .5rem rgba(15,17,17,.15);
+    }
+
+    /* Product Details: makes drop-down text White */
+    .a-dropdown-prompt {
+      color: var(--dark-text-color) !important;
+    }
+
+    /* Product Details Drop-Down: Changes the entire popover color to black and more*/
+    .a-popover-wrapper{
+      background-color: var(--dark-background-color) !important;
+    }
+    /* Product Details Drop-Down: Changes the header color */
+    .a-dropdown .a-popover-header {
+      background-color: var(--dark-background-color) !important;
+      border-radius: .8rem .8rem 0 0;
+      padding: 0 2.4rem;
+    }
+    /* Product Details Drop-Down: Changes the selection button*/
+    .a-dropdown-common .a-dropdown-link.a-active {
+      background-color: var(--dark-button-background);
+      border-color: var(--dark-text-color);
+      border-top-color: var(--dark-text-color);
+      border-left-color: var(--dark-text-color) !important;
+    }
+    /* Product Details Drop-Down: Changes the button text color*/
+    .a-dropdown-common .a-dropdown-link {
+      color: var(--dark-text-color);
+    }
+
 /* Pagination Text Color*/
     ul.a-pagination li a {
       color: var(--dark-text-color);
-      }
+    }
 
 /* Reviews Page */
     /* Changing Header color for dark mode */
     .vvp-tab-content .vvp-reviews-table--heading-top {
-      background-color: var(--dark-cutoff-background-color) !important;  
+      background-color: var(--dark-cutoff-background-color) !important;
     }
 
 /* Orders Page */
