@@ -727,7 +727,7 @@ border-bottom: .2rem solid #ffffff;}
 }
 /* Changes the Bold Strings to Gold color */
 .vvp-account-box strong {
-  color: #e0b500;
+  color: #e0b500 !important;
 }  
 
 /* Fixes the Account Page sizing */
@@ -934,11 +934,12 @@ border-bottom: .2rem solid #ffffff;}
       background-color: var(--dark-cutoff-background-color) !important;
     }
 
+
 /* Account Page */
   .a-box.a-color-alternate-background, .a-box.a-color-offset-background {
     background-color: var(--dark-cutoff-background-color) !important;
     }
   .grey-text {
-    color: var(--dark-text-color);
+    color: var(--dark-text-color) !important;
   }
 }
