@@ -630,7 +630,7 @@ border-bottom: .2rem solid #ffffff;}
   display: inline-block;
   max-width: 100% !important;
   position: fixed !important;
-  top: 500px !important;
+  top: 203.5px !important;
   left: 97.5px !important;      
   opacity: 1;
   max-height: 50vh !important;
@@ -646,7 +646,6 @@ border-bottom: .2rem solid #ffffff;}
   z-index: 101;
   left: 18px;
 }
-
 
 /* Change the "Share on Discord" button, if user has installed */
 .vvp-modal-footer {
@@ -717,6 +716,30 @@ border-bottom: .2rem solid #ffffff;}
 .custom-tooltip {
   display: none;
 }
+
+/* --------------- Account Page --------------- */
+/* Corrects the text display on the account page, properly fits within the boxes */
+.vvp-account-box {
+  padding: 0px !important;
+  margin-bottom: 20px;
+  border: 1px solid #d5d9d9!important;
+  height: 250px;
+}
+/* Changes the Bold Strings to Gold color */
+.vvp-account-box strong {
+  color: #e0b500;
+}  
+
+/* Fixes the Account Page sizing */
+#vvp-tax-information-container div {
+  vertical-align: top;
+  width: 100% !important;
+}
+#vvp-tax-information-container .a-section {
+  display: inline-block;
+  margin-right: 0px !important;
+}   
+
 
 /* END OF: New Edits for both Light Mode and Dark Mode */
 /* #################################################################################### */
@@ -910,4 +933,12 @@ border-bottom: .2rem solid #ffffff;}
     .vvp-tab-content .vvp-orders-table--heading-top {
       background-color: var(--dark-cutoff-background-color) !important;
     }
+
+/* Account Page */
+  .a-box.a-color-alternate-background, .a-box.a-color-offset-background {
+    background-color: var(--dark-cutoff-background-color) !important;
+    }
+  .grey-text {
+    color: var(--dark-text-color);
+  }
 }
